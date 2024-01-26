@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private Animator anim;
     private Rigidbody[] rigidbodies;
-    [SerializeField] bool isdead;
+    public bool isdead;
     [SerializeField] private Transform targetPlayer;
     private NavMeshAgent enemy;
     [SerializeField] private float waitTime;

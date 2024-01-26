@@ -549,6 +549,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3906534727139763463}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-8403292428481613180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4249046687289022550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d5790272854a4439097b9ffabc0ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1971513756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,6 +599,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &6508747448711684860
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4249046687289022550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.7088425
+  m_Direction: 1
+  m_Center: {x: -0, y: 0.85442126, z: 0}
 --- !u!1 &5506130975913693316 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8817898888258712963, guid: 13260470e91ab1944a657dc982186a0e,
