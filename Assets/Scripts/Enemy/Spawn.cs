@@ -4,33 +4,52 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] private GameObject EnemyBot;
-    [SerializeField] private Transform trans;
-    private int enemyCount;
-    [SerializeField] private float enemys;
-    [SerializeField] private float waitTime;
-    void Start()
+    [SerializeField]private int currentRound = 1;
+    [SerializeField]private int enemiesRemaining = 0;
+    [SerializeField]private GameObject enemyPrefab;
+    [SerializeField]private Transform spawnPoint;
+    [SerializeField]private int enemiesPerRound = 5;
+
+    private void Awake()
     {
-        trans = GetComponent<Transform>();
+        spawnPoint = GetComponent<Transform>();
+    }
+    private void Start()
+    {
+        StartRound();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void StartRound()
     {
-        if(enemyCount <= enemys)
+        enemiesRemaining = enemiesPerRound;
+        SpawnEnemies();
+    }
+
+    private void SpawnEnemies()
+    {
+        for (int i = 0; i < enemiesRemaining; i++)
         {
-            StartCoroutine(EnemyDrop());
-            
-            
+            Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
         }
     }
 
-    IEnumerator EnemyDrop()
+    public void Update()
     {
-        
-        Instantiate(EnemyBot, new Vector3(trans.position.x, trans.position.y, trans.position.z), Quaternion.identity);
-        enemyCount += 1;
-        yield return new WaitForSeconds(waitTime);
+        if (enemiesRemaining > 0)
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
+            if (enemies.Length == 0)
+            {
+                currentRound++;
+                enemiesPerRound += 5;
+                StartRound();
+            }
+        }
+    }
+
+    public void EnemyDestroyed()
+    {
+        enemiesRemaining--;
     }
 }
