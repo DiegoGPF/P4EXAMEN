@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 13260470e91ab1944a657dc982186a0e,
         type: 3}
       propertyPath: m_Name
-      value: Bot_Blue
+      value: Bot_Blue Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 13260470e91ab1944a657dc982186a0e,
         type: 3}
