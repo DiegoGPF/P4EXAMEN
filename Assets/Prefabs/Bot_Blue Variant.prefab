@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &936697052169383738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6690833554488648845}
+  m_Layer: 0
+  m_Name: EffectPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6690833554488648845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936697052169383738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.199, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8756368509532754411}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3906534727139763463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -549,6 +580,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3906534727139763463}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &6508747448711684860
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4249046687289022550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.7088425
+  m_Direction: 1
+  m_Center: {x: -0, y: 0.85442126, z: 0}
 --- !u!114 &-8403292428481613180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,6 +622,10 @@ MonoBehaviour:
   isdead: 0
   targetPlayer: {fileID: 0}
   waitTime: 2
+  effect: {fileID: 102983183881061777, guid: 86e9775a6d00f0d4c8bbb73c8096f238, type: 3}
+  ExplosionEffect: {fileID: 4067635852372260569, guid: 3f0cf0f395b375044bf1b749236a313d,
+    type: 3}
+  effectPosition: {fileID: 6690833554488648845}
 --- !u!195 &1971513757
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -599,20 +648,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!136 &6508747448711684860
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4249046687289022550}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.7088425
-  m_Direction: 1
-  m_Center: {x: -0, y: 0.85442126, z: 0}
 --- !u!1 &5506130975913693316 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8817898888258712963, guid: 13260470e91ab1944a657dc982186a0e,
@@ -1022,3 +1057,9 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!4 &8756368509532754411 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3480699329000672020, guid: 13260470e91ab1944a657dc982186a0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3906534727139763463}
+  m_PrefabAsset: {fileID: 0}

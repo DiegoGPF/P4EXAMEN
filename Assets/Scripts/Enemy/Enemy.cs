@@ -11,7 +11,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform targetPlayer;
     private NavMeshAgent enemy;
     [SerializeField] private float waitTime;
-    
+    public GameObject effect;
+    public GameObject ExplosionEffect;
+    [SerializeField] Transform effectPosition;
+
     void Start()
     {
         enemy = GetComponent<NavMeshAgent>();
@@ -48,7 +51,9 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator IsDeath()                              //Corrutina que se activa cuando se activa el ragdoll
     {
+        Instantiate(effect, effectPosition.position, Quaternion.identity);
         yield return new WaitForSeconds(waitTime);
         Destroy(gameObject);
+        Instantiate(ExplosionEffect, effectPosition.position, Quaternion.identity);
     }
 }
